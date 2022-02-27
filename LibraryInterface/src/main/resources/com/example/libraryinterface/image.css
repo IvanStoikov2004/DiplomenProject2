@@ -1,0 +1,44 @@
+.logo{
+-fx-background-image:url('logo.png');
+-fx-background-size:700;
+-fx-opacity: 0.4;
+-fx-background-repeat: stretch;
+-fx-background-color: #f6ff7d;
+}
+
+.returnRegistration{
+-fx-background-image:url('return.png');
+-fx-background-size:36;
+}
+
+.padlock{
+-fx-background-image:url('katinar.png');
+-fx-background-repeat: stretch;
+-fx-background-size:180;
+}
+
+
+.returnButtonForgotPassword{
+-fx-background-image:url('return.png');
+-fx-background-size:36;
+}
+
+.returnLogin{
+-fx-background-image:url('return.png');
+-fx-background-size:36;
+}
+
+.showPassword{
+-fx-background-image:url('showPassword.png');
+-fx-background-size:36;
+}
+
+.ShowPassword{
+-fx-background-image:url('showPassword.png');
+-fx-background-size:36;
+}
+
+.NewPasswordShow{
+-fx-background-image:url('showPassword.png');
+-fx-background-size:36;
+}

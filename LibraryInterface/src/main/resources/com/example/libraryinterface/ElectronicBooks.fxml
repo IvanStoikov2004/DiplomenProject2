@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libraryinterface.ElectronicBooks">
+   <children>
+      <TableView fx:id="TableElectronicBooks" layoutX="25.0" layoutY="47.0" onMouseClicked="#getSelectedElectronicBook" prefHeight="463.0" prefWidth="882.0">
+        <columns>
+          <TableColumn fx:id="col_NameElectronicBook" prefWidth="186.0" text="Name" />
+          <TableColumn fx:id="col_AuthorElectronicBook" prefWidth="240.0" text="Author" />
+            <TableColumn fx:id="col_ZanrElectronicBook" prefWidth="292.0" text="Zanr" />
+            <TableColumn fx:id="col_SerialNumberElectronicBook" prefWidth="163.0" text="SerialNumber" />
+        </columns>
+      </TableView>
+      <Button fx:id="ReadElectronicBooksFXID" layoutX="379.0" layoutY="548.0" mnemonicParsing="false" onAction="#ReadElectronicBooksOnAction" prefHeight="73.0" prefWidth="195.0" text="Read" />
+      <Button fx:id="returnButtonFXID" layoutX="886.0" layoutY="2.0" mnemonicParsing="false" onAction="#returnButtonOnAction" text="return" />
+      <TextField fx:id="SearchBar" layoutX="230.0" layoutY="15.0" prefHeight="25.0" prefWidth="582.0" promptText="Search" />
+      <MenuBar layoutY="3.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="filtri">
+               <items>
+                  <Menu mnemonicParsing="false" text="zanr">
+                     <items>
+                        <MenuItem fx:id="zanrPrikazkaFiltyrFXID" mnemonicParsing="false" onAction="#zanrPrikazkaFiltyrOnAction" text="приказка" />
+                        <MenuItem fx:id="zanrRomanFiltyrFXID" mnemonicParsing="false" onAction="#zanrRomanFiltyrOnAction" text="роман" />
+                        <MenuItem fx:id="zanrFentyziFiltyrFXID" mnemonicParsing="false" onAction="#zanrFentyziFiltyrOnAction" text="фентъзи" />
+                        <MenuItem fx:id="zanrHoryrFiltyrFXID" mnemonicParsing="false" onAction="#zanrHoryrFiltyrOnAction" text="хорър" />
+                        <MenuItem fx:id="zanrTriloyrFiltyrFXID" mnemonicParsing="false" onAction="#zanrTriloyrFiltyrOnAction" text="трилър" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="avtor">
+                     <items>
+                        <MenuItem fx:id="authorBratqGrimFiltyrFXID" mnemonicParsing="false" onAction="#authorBratqGrimFiltyrOnAction" text="Братя Грим" />
+                        <MenuItem fx:id="authorMadamDioBomonFiltyrFXID" mnemonicParsing="false" onAction="#authorMadamDioBomonFiltyrOnAction" text="Мадам дьо Бомон" />
+                        <MenuItem fx:id="authorAstridLingrendFiltyrFXID" mnemonicParsing="false" onAction="#authorAstridLingrendFiltyrOnAction" text="Астрид Линдгрен" />
+                        <MenuItem fx:id="authorSharlPeroFiltyrFXID" mnemonicParsing="false" onAction="#authorSharlPeroFiltyrOnAction" text="Шарл Перо" />
+                        <MenuItem fx:id="authorAniVivantiFiltyrFXID" mnemonicParsing="false" onAction="#authorAniVivantiFiltyrOnAction" text="АНИ ВИВАНТИ" />
+                        <MenuItem fx:id="authorDiinKuncFiltyrFXID" mnemonicParsing="false" onAction="#authorDiinKuncFiltyrOnAction" text="ДИЙН КУНЦ" />
+                        <MenuItem fx:id="authorEndruLourynsFiltyrFXID" mnemonicParsing="false" onAction="#authorEndruLourynsFiltyrOnAction" text="ЕНДРЮ ЛОУРЪНС" />
+                        <MenuItem fx:id="authorWalentinPopovFiltyrFXID" mnemonicParsing="false" onAction="#authorWalentinPopovFiltyrOnAction" text="ВАЛЕНТИН ПОПОВ - ВОТАН" />
+                        <MenuItem fx:id="authorStiwynKingFiltyrFXID" mnemonicParsing="false" onAction="#authorStiwynKingFiltyrOnAction" text="СТИВЪН КИНГ" />
+                        <MenuItem fx:id="authorDjonDWindvFiltyrFXID" mnemonicParsing="false" onAction="#authorDjonDWindvFiltyrOnAction" text="ДЖОАН Д. ВИНДЖ" />
+                        <MenuItem fx:id="authorPityrStrobFiltyrFXID" mnemonicParsing="false" onAction="#authorPityrStrobFiltyrOnAction" text="ПИТЪР СТРОБ" />
+                        <MenuItem fx:id="authorDaniylSilwaFiltyrFXID" mnemonicParsing="false" onAction="#authorDaniylSilwaFiltyrOnAction" text="Даниъл Силва" />
+                        <MenuItem fx:id="authorZulVernFiltyrFXID" mnemonicParsing="false" onAction="#authorZulVernFiltyrOnAction" text="Жул Верн" />
+                        <MenuItem fx:id="authorByrtrisSmolFXID" mnemonicParsing="false" onAction="#authorByrtrisSmolOnAction" text="БЪРТРИС СМОЛ" />
+                        <MenuItem fx:id="authorMaikylKraitynFXID" mnemonicParsing="false" onAction="#authorMaikylKraitynOnAction" text="МАЙКЪЛ КРАЙТЪН" />
+                        <MenuItem fx:id="authorNiilGeitynFXID" mnemonicParsing="false" onAction="#authorNiilGeitynOnAction" text="НИЙЛ ГЕЙМЪН" />
+                        <MenuItem fx:id="authorStiwynHyntyrFXID" mnemonicParsing="false" onAction="#authorStiwynHyntyrOnAction" text="СТИВЪН ХЪНТЪР" />
+                        <MenuItem fx:id="authorMaikylSkotFXID" mnemonicParsing="false" onAction="#authorMaikylSkotOnAction" text="МАЙКЪЛ СКОТ, КОЛЕТ ФРИЙДМАН" />
+                        <MenuItem fx:id="authorWiktoriqAivqrdFXID" mnemonicParsing="false" onAction="#authorWiktoriqAivqrdOnAction" text="ВИКТОРИЯ АЙВЯРД" />
+                        <MenuItem fx:id="authorMaikylRidpadFXID" mnemonicParsing="false" onAction="#authorMaikylRidpadOnAction" text="МАЙКЪЛ РИДПАТ" />
+                        <MenuItem fx:id="authorDjuliAnUokyrFXID" mnemonicParsing="false" onAction="#authorDjuliAnUokyrOnAction" text="ДЖУЛИ АН УОКЪР" />
+                        <MenuItem fx:id="authorBiliLecFXID" mnemonicParsing="false" onAction="#authorBiliLecOnAction" text="БИЛИ ЛЕЦ" />
+                        <MenuItem fx:id="authorKoliinFolkynFXID" mnemonicParsing="false" onAction="#authorKoliinFolkynOnAction" text="КОЛИЙН ФОЛКНЪР" />
+                        <MenuItem fx:id="authorLeiGriinuudFXID" mnemonicParsing="false" onAction="#authorLeiGriinuudOnAction" text="ЛЕЙ ГРИЙНУУД" />
+                        <MenuItem fx:id="authorDeboraHarkensFXID" mnemonicParsing="false" onAction="#authorDeboraHarkensOnAction" text="ДЕБОРА ХАРКНЕС" />
+                        <MenuItem fx:id="authorAnRaisFXID" mnemonicParsing="false" onAction="#authorAnRaisOnAction" text="АН РАЙС" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="WithoutFiltersFXID" mnemonicParsing="false" onAction="#WithoutFiltersOnAction" text="Без Филтри" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

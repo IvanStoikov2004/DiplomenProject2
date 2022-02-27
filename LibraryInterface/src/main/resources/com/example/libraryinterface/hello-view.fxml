@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1369.0" style="-fx-background-color: #f6ff7d;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libraryinterface.HelloController">
+   <children>
+      <AnchorPane layoutY="175.0" prefHeight="328.0" prefWidth="544.0" style="-fx-background-color: orange; -fx-border-color: black;">
+         <children>
+            <Label layoutX="69.0" layoutY="36.0" prefHeight="40.0" prefWidth="102.0" text="Book name:" underline="true" AnchorPane.leftAnchor="69.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="96.0" prefHeight="40.0" prefWidth="102.0" text="Book Author:" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="149.0" prefHeight="40.0" prefWidth="109.0" text="Serial number:" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="labelBookName" layoutX="178.0" layoutY="39.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: black;" AnchorPane.rightAnchor="75.0" />
+            <TextField fx:id="labelBookAuthor" layoutX="178.0" layoutY="99.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: black;" />
+            <TextField fx:id="labelBookSerialNumber" layoutX="178.0" layoutY="154.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: black;" />
+            <TextField fx:id="zanr" layoutX="178.0" layoutY="220.0" prefHeight="26.0" prefWidth="294.0" style="-fx-border-color: black;" />
+            <Label layoutX="70.0" layoutY="213.0" prefHeight="40.0" prefWidth="102.0" text="Жанр:" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="66.0" prefHeight="73.0" prefWidth="239.0" style="-fx-background-color: orange; -fx-border-color: black;" text="ADD BOOK" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="346.0" AnchorPane.topAnchor="66.0">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="353.0" layoutY="514.0" mnemonicParsing="false" onAction="#ClearAll" prefHeight="55.0" prefWidth="122.0" style="-fx-background-color: orange; -fx-border-color: black;" text="Clear">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="135.0" layoutY="514.0" mnemonicParsing="false" onAction="#AddBook" prefHeight="55.0" prefWidth="122.0" style="-fx-background-color: orange; -fx-border-color: black;" text="Add Book">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOut" layoutX="1053.0" layoutY="-1.0" minWidth="47.0" mnemonicParsing="false" onAction="#LogOutButton" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: orange;" text="Log out">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="TableBook" layoutX="553.0" layoutY="148.0" onMouseClicked="#getSelected" prefHeight="462.0" prefWidth="787.0">
+        <columns>
+          <TableColumn fx:id="col_Name" prefWidth="171.0" text="Name" />
+          <TableColumn fx:id="col_Author" prefWidth="155.0" text="Author" />
+            <TableColumn fx:id="col_SerialNumber" prefWidth="123.0" text="SerialNumber" />
+            <TableColumn fx:id="col_Zanr" prefWidth="130.0" text="Zanr" />
+            <TableColumn fx:id="col_email" prefWidth="130.0" text="email" />
+            <TableColumn fx:id="col_Date" prefWidth="130.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="refreshTableView" layoutX="1067.0" layoutY="103.0" mnemonicParsing="false" onAction="#refreshTableViewOnAction" text="refresh" />
+      <Button fx:id="EditTableView" layoutX="1159.0" layoutY="106.0" mnemonicParsing="false" onAction="#EditTableViewOnAction" text="edit" />
+      <Button fx:id="deleteTableView" layoutX="1242.0" layoutY="106.0" mnemonicParsing="false" onAction="#deleteTableViewOnAction" text="delete" />
+   </children>
+</AnchorPane>
